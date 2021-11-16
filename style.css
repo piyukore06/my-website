@@ -1,0 +1,142 @@
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+:root {
+  --primary: #F51418;
+  --bg: #FBF0F0;
+  --seconday-bg: #B9A9B1;
+  --text: #08070E;
+  --secondary-text: #FFF;
+}
+/* https://css-tricks.com/rems-ems/ */
+/* Document level adjustments */
+html {
+  font-size: 17px;
+  font-family: Montserrat, 'sans-serif';
+}
+body {
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  html { font-size: 15px; }
+}
+@media (max-width: 400px) {
+  html { font-size: 13px; }
+}
+
+/* Modules will scale with document */
+.header {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer {
+  font-size: 0.75rem;
+}
+.sidebar {
+  font-size: 0.85rem;
+}
+
+/* Type will scale with modules */
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2.5em;
+}
+h3 {
+  font-size: 2em;
+}
+
+.header-action {
+  background-color: var(--primary);
+  color: var(--secondary-text);
+  border: none;
+  padding: 10px 15px;
+}
+
+.nav ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.nav ul li {
+  padding: 0 0.8rem;
+  font-size: 1rem;
+}
+
+.p-side {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.p-top {
+  padding-top: 2rem;
+}
+
+.p-bottom {
+  padding-bottom: 2rem;
+}
+
+.introduction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bg {
+  background-color: var(--bg);
+}
+.combined-container {
+  position: relative;
+}
+
+.bg-band {
+  position: absolute;
+  height: 100%;
+  width: 30vw;
+  top: 0;
+  left: 40vw;
+  background-color: rgba(245, 20, 24, 0.1);
+}
+
+.bg-secondary-band {
+  position: absolute;
+  height: 70%;
+  width: 30vw;
+  bottom: 0;
+  left: 65vw;
+  background-color: rgba(245, 20, 24, 0.5);
+  border-radius: 5px 5px 0 0;
+}
+
+.portfolio-image {
+  z-index: 1;
+}
+
+.aside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reviewer-image-container {
+  width: calc((100vw - 10rem)/ 2);
+  background-color: var(--primary);
+  border-radius: 15px;
+}
+.reviewer-image {
+  background-image: url(./img.png);
+  width: 300px;
+  height: 300px;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.aside-text {
+  padding-left: 2rem;
+}
+
+.footer {
+  text-align: center;
+}
